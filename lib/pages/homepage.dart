@@ -22,6 +22,7 @@ class _HomePageState extends State<HomePage> {
 
   var _questionIndex = 0;
   var _totalScore = 0;
+  var _title = 'Quiz Me Up';
 
   void _answerQuest(int score) {
     _totalScore += score;
@@ -46,6 +47,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       _questionIndex = 0;
       _totalScore = 0;
+      _title = 'Quiz Me Up';
       _controller.dispose();
     });
   }
@@ -58,6 +60,7 @@ class _HomePageState extends State<HomePage> {
         ..initialize().then((_) {
           _controller.play();
         });
+      _title = 'Your Score: ${getGrade(_totalScore).round()}';
     });
   }
 
@@ -90,9 +93,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).primaryColor,
         centerTitle: true,
-        title: const Text(
-          'Quiz Me Up',
-          style: TextStyle(
+        title: Text(
+          _title,
+          style: const TextStyle(
             fontSize: 28,
             color: Colors.white,
             fontWeight: FontWeight.w300,

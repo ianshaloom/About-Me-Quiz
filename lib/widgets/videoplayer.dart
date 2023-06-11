@@ -12,7 +12,7 @@ class VideoPlayerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return controller.value.isInitialized
         ? Padding(
-            padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            padding: const EdgeInsets.only(top: 8, left: 8.0, right: 8.0),
             child: SizedBox(
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.height * 0.30,

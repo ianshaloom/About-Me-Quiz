@@ -34,7 +34,7 @@ class Answers extends StatelessWidget {
             style: const TextStyle(
               fontSize: 16,
               color: Color(0xff6750a4),
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w300,
             ),
           ),
         ),

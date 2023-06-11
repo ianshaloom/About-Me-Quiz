@@ -49,17 +49,6 @@ class ResultPage extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(bottom: 10, top: 20),
-          child: Text(
-            'Your Score: ${getGrade(quizResults).round()}',
-            style: const TextStyle(
-              fontSize: 40,
-              color: Colors.black,
-              fontWeight: FontWeight.w100,
-            ),
-          ),
-        ),
         VideoPlayerWidget(
           controller: controller,
         ),
@@ -69,7 +58,7 @@ class ResultPage extends StatelessWidget {
             resultPhrase,
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               color: Colors.black,
               fontWeight: FontWeight.w200,
             ),
@@ -79,12 +68,15 @@ class ResultPage extends StatelessWidget {
           padding: const EdgeInsets.only(top: 20.0),
           child: FloatingActionButton.extended(
             onPressed: onPressed,
-            icon: const Icon(Icons.quiz_outlined),
+            icon: const Icon(
+              Icons.quiz_outlined,
+              color: Color(0xff6750a4),
+            ),
             label: const Text(
               'Try One More Time',
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.black,
+                color: Color(0xff6750a4),
                 fontWeight: FontWeight.w300,
               ),
             ),

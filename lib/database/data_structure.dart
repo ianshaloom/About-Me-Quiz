@@ -59,8 +59,12 @@ class DataStructure {
     {
       'questionText': 'What is my all-time favorite anime quote?',
       'answers': [
-        {'text': 'Let go your earthly tether', 'score': 0},
-        {'text': 'Instinct is a lie, told by a fearful body.', 'score': 0},
+        {'text': 'Let go your earthly tether. Enter the void. Empty and become wind.', 'score': 0},
+        {
+          'text':
+              'Instinct is a lie, told by a fearful body, hoping to be wrong.',
+          'score': 0
+        },
         {'text': 'Set your heart ablaze', 'score': 10},
       ],
     },
